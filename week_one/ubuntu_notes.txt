@@ -1,0 +1,19 @@
+/bin -- contains most commonly used terminal commands like ls / mount / rm
+
+/boot -- contains files needed to start up the system including the linux kernel a RAM disk image and bootloader
+
+/dev --  contains all device files which refer to various hardware devices on the system such as harddrives
+
+/etc -- contains system global config files that affect the system behaviour for all usrs
+
+/home -- home dir for all users
+
+/lib -- contains very important dynamic libraries and kernel modules
+
+/media -- intended as a mount point for externel devices such as hard drives or removeable media
+
+/tmp -- place for temporary files used by applications
+
+/usr -- contains the majority of user utilities and apps and partly replicates the root directory structure containing directories like /usr/bin/ and /usr/lib
+
+/var -- dedicated to variable data such as logs dbs and websites

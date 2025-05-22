@@ -1,0 +1,21 @@
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2025-05-21 18:42:33 MDT; 1h 23min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 284 (dockerd)
+      Tasks: 16
+     Memory: 88.4M
+     CGroup: /system.slice/docker.service
+             └─284 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.007566959-06:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.121768814-06:00" level=info msg="Loading containers: done."
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.162285397-06:00" level=warning msg="WARNING: No blkio throttle.read_bps_device support"
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.162337340-06:00" level=warning msg="WARNING: No blkio throttle.write_bps_device support"
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.162345737-06:00" level=warning msg="WARNING: No blkio throttle.read_iops_device support"
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.162352155-06:00" level=warning msg="WARNING: No blkio throttle.write_iops_device support"
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.162377061-06:00" level=info msg="Docker daemon" commit="26.1.3-0ubuntu1~22.04.1" containerd-snapshotter=false storage-driver=overlay2 version=26.1.3
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.163349868-06:00" level=info msg="Daemon has completed initialization"
+May 21 18:42:33 DevlinDataDomai dockerd[284]: time="2025-05-21T18:42:33.415857290-06:00" level=info msg="API listen on /run/docker.sock"
+May 21 18:42:33 DevlinDataDomai systemd[1]: Started Docker Application Container Engine.

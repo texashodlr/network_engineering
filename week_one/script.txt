@@ -1,0 +1,9 @@
+total 136
+drwxr-xr-x 2 cdevlin cdevlin  4096 May 21 19:53 .
+drwxr-xr-x 4 cdevlin cdevlin  4096 May 21 19:41 ..
+-rw-r--r-- 1 cdevlin cdevlin 47653 May 21 19:46 error_logs.txt
+-rw-r--r-- 1 cdevlin cdevlin 58962 May 21 19:48 error_logs2.txt
+-rw-r--r-- 1 cdevlin cdevlin     4 May 21 19:49 error_logs3.txt
+-rw-r--r-- 1 cdevlin cdevlin 10964 May 21 19:42 etc_contents.txt
+-rw-r--r-- 1 cdevlin cdevlin     0 May 21 19:53 script.txt
+-rwxr-x--- 1 cdevlin cdevlin    34 May 21 19:50 test.sh

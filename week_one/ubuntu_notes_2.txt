@@ -1,0 +1,15 @@
+Commands:
+	ip -- ip link show / ip addr add / ip route
+	
+	ethtool -- display and configure network interface settings
+		ethtool -i eth0
+		
+	tcpdump -- capturing and analyzing network packets
+		tcpdump -i eth0 port 22 -w capture.pcap
+		tcpdump -i ib0
+
+	iperf3 -- measure network bw and performance
+		iperf3 -s, iperf3 -c <server_ip> 
+
+	ss -- display socket stats for troubleshooting connections
+		ss -tuln , ss -i
