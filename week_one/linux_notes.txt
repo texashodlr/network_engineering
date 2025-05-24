@@ -10,3 +10,42 @@ More Linux:
 
 	auto eth0
 	iface eth0 inet dhcp
+
+ps -ef / ps aux / ps aux --forest / pstree
+
+Showing all processes with specified PID: ps -f -p 1
+Shows all process where parent process has PID 1
+
+alias lh='ls -alh'
+
+We can also just call 'alias' to determine all aliases out there.
+
+Can obviously source it: source ./.bashrc
+
+Some user stuff:
+	whoami / id =[User ID, Primary Group ID, Groups]
+	U/GID = 0 for root
+	1-99 for predefined accounts
+	100-999 for system + admin accounts
+	gte 1000 f/users
+cat /etc/passwd
+	structure is: username:password:UID:GID:desription:homedir:shell
+	
+	logins with /sbin/nologin are for technical/admin accounts that don't need to login or perform actions interactively
+
+	/etc/shadow contains more senstive information about users, format: username:password:[other nonsense]
+		For pws, it's either hashed, * for no pw set, ! for pw was never set
+
+	
+	/etc/group --> group_name:password:GID:users_in_group (You can set pw's for groups)
+	/etc/gshadow
+
+Command 'which' shows where the executable is located for a certain command
+	can do 'file $(which adduser)' -> choose adduser
+
+	Using useradd:
+		-d creates the homedir in a specified dir
+		-m create the home dir
+		-p password
+		-s provide shell
+		-c comments or description of the account
