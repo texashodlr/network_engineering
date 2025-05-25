@@ -49,3 +49,6 @@ Command 'which' shows where the executable is located for a certain command
 		-p password
 		-s provide shell
 		-c comments or description of the account
+
+
+Clearing history: history -c
