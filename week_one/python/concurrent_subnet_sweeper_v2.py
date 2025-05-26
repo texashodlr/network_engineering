@@ -12,7 +12,8 @@ import csv
 from ping3 import ping
 
 subnets = ['192.168.1.0/29', '192.168.60.0/29', '192.168.69.0/29']
-output_file = 'subnet_sweep_results.csv'
+timestamp_file = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+output_file = f"subnet_sweep_results_{timestamp_file}.csv"
 output_lock = threading.Lock()
 
 def ping_sweep(subnet):
@@ -25,22 +26,28 @@ def ping_sweep(subnet):
         try:
             response_time = ping(ip_str, timeout=1)
             if response_time is not None:
-                message = f"{timestamp} - {ip_str} is reachable"
+                status = "reachable"
             else:
-                message = f"{timestamp} - {ip_str} is unreachable"
+                status = "unreachable"
         except Exception:
-            message = f"{timestamp} - Error pinging {ip_str}"
-        
-        results.append(message)
+            status = "error"
+        # Storing the sweep results as a dictionary for a CSV
+        results.append({
+            "Timestamp": timestamp,
+            "Subnet": subnet,
+            "IP": ip_str,
+            "Status": status
+         })
 
     with output_lock:
         print(f"Ping results for subnet {subnet}:")
-        with open (output_file, 'a') as f:
-            f.write(f"Ping results for subnet {subnet}:\n")
-            for msg in results:
-                print(msg)
-                f.write(msg + '\n')
-            f.write('\n')
+        with open (output_file, 'a',newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=["Timestamp", "Subnet", "IP", "Status"])
+            if f.tell() == 0:
+                writer.writeheader()
+            for result in results:
+                    print(f"{result['Timestamp']} - {result['IP']} is {result['Status']}")
+                    writer.writerow(result)
         print()
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
