@@ -1,0 +1,15 @@
+# Layer 1 - Physical Layer
+
+Role: The physical layer (PL) governs the transmission of raw bit streams over a physical medium (copper, fiber, wireless).
+	It defines the procedural standards for establishing and maintaining physical connections.
+
+Key Concepts:
+	1. Signal transmission: Encoding data as electrical signals or optical pulses
+	2. Modulation Techniques Methods like quadrature amplitude modulation (QAM) or Phase Shift Keying (PSK)
+	3. Line Coding: Schemes such as non-return-to-zero (NRZ) or manchester encoding to represent binary data for transmission
+	4. Physical Connectors and Interfaces: Standards like RJ45 for Ethernet or Small Form Factor Pluggable (SFP) transcievers for fiber.
+
+MX/SX:
+	1. Faulty cables or connectors: Cable testers (handheld devices) and visual checks to identify broken/lose fiber/copper connections
+	2. Signal integrity issues: diagnosing problems like attenuation/noise/EMI
+	3. Hardware failures: Identifying issues with NICs, transcievers or ports.
