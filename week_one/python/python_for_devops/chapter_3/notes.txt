@@ -1,2 +1,11 @@
 Key modules are:
 	sys, os, subprocess
+
+Commands(?):
+	sys.byteorder -> Little
+	sys.platform -> Linux
+	sys.version_info
+	os.getenv('USER')
+	os.chdir('/DIR')
+	cp = subprocess.run(['ls', '-l'],capture_output=True, universal_newlines=True)
+	subprocess.run()
