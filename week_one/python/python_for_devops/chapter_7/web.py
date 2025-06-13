@@ -4,6 +4,14 @@ from flask import Response, Flask
 import prometheus_client
 from prometheus_client import Counter, Histogram
 
+"""
+Access the site on http://localhost:5000
+Access metrics via ...5000/metrics/
+Access the splash via 5000/
+Access the DB fail via 5000/database/
+
+"""
+
 app = Flask('prometheus-app')
 
 REQUESTS = Counter(
